@@ -131,16 +131,4 @@ public class Basic3D extends JFrame
             }
         }
     }
-public void humito( int Y ) {
-        System.out.println(Y);
-        int x1 = 0, x2 = 0, y = 0;
-        for (double i = 2*Math.PI; i>0; i=i-.01) 
-        {
-            x2 = x1;
-            y =(int) ((int) (350-(6*i)));
-            x1= (int)((int) 240+6*i*Math.cos(4*i));
-            if(i!=2*Math.PI)
-            DDA(Buffer, x1+360, (int) y-Y, x2+360, y-Y,Color.red);
-        }
-      }
 }
