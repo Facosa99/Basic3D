@@ -2,13 +2,8 @@ package Basic3D;
 
 import java.awt.Color;
 import java.awt.Graphics;
-import static java.awt.PageAttributes.ColorType.COLOR;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import static java.lang.Math.abs;
-import static java.lang.Math.round;
-import java.util.Timer;
-import java.util.TimerTask;
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
