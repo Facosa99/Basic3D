@@ -16,7 +16,7 @@ public class Cohete extends Thread
         Cuete.setRes(1200, 700);
         Cuete.setCentroGravedad(24, 23, 74); //Nuestras tranformaciones serán a partir de esta coordenada     
         //Coordenadas
-        int P00[]  =   { 34,  33,   104 };   
+        int P00[]  =   { 34,  33,   104 };
         int P01[]  =   { 34,  13,   104 };
         int P02[]  =   { 14,  33,   104 };
         int P03[]  =   { 14,  13,   104 };                 
@@ -58,14 +58,10 @@ public class Cohete extends Thread
         Cuete.Rotacion(90,0,0);
         Cuete.Escalacion(8,8,8); 
     }
-
-    
-    
     public void Dibujar (BufferedImage Buffer)
     {
         Cuete.drawCuerpo(Buffer);
-    }    
-       
+    }
     @Override
     public void run()
     {          
