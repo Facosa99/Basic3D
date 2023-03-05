@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 
 public class Basic3D extends JFrame 
 {
-    static Cohete Cuete = new Cohete();
+    static Arwing Cuete = new Arwing();
     static Update Actualizar = new Update();
     static int Escena = 1;
     static  BufferedImage Buffer;  
@@ -28,7 +28,7 @@ public class Basic3D extends JFrame
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         Buffer          = new BufferedImage(ResX,ResY,BufferedImage.TYPE_INT_RGB);
         LimpiarBuffer   = new BufferedImage(ResX,ResY,BufferedImage.TYPE_INT_RGB);        
-        Cohete Cuete    = new Cohete();
+        Arwing Cuete    = new Arwing();
         Cuete.Inicializar();
         
         setVisible(true);
@@ -41,7 +41,7 @@ public class Basic3D extends JFrame
     }     
 
     @Override
-    public void paint(Graphics g)
+    public void paint(Graphics g)   //Print Graphics on Screen
     {     
         //Buffer.setData(LimpiarBuffer.getData());         
         try 
@@ -65,8 +65,6 @@ public class Basic3D extends JFrame
         if (Escena == 1)
         {
             malla();
-            humito(Humo-280);
-            Humo += 6;
         }        
         this.getGraphics().drawImage(Buffer, 0, 0, this);        
     } 

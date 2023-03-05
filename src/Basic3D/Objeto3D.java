@@ -17,7 +17,7 @@ public class Objeto3D
         CamCentroX = CentroX;    CamCentroY = CentroY;    CamCentroZ = CentroZ;
         CamPlanoX  = PlanoX;     CamPlanoY  = PlanoY;     CamPlanoZ  = PlanoZ;
         ResX       = ResolucionX;ResY = ResolucionY;
-    }    
+    }
     public  void setCentroGravedad( int x, int y, int z)
     {
         CentroGravedadX = x;
