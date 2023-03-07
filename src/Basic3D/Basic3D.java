@@ -32,7 +32,7 @@ public class Basic3D extends JFrame
         Cuete.Inicializar();
         
         setVisible(true);
-    }    
+    }
     
     public static void main(String[] args) 
     {
@@ -43,23 +43,7 @@ public class Basic3D extends JFrame
     @Override
     public void paint(Graphics g)   //Print Graphics on Screen
     {     
-        //Buffer.setData(LimpiarBuffer.getData());         
-        try 
-        {    
-            if ( Escena == 1)
-            {
-                Fondo            = ImageIO.read(getClass().getResource("img/Fondo.jpg")); 
-                
-            }
-            else
-            {
-                Fondo            = ImageIO.read(getClass().getResource("img/Tierra.jpg")); 
-            }
-                         
-        } catch (IOException e) 
-        {            
-            e.printStackTrace();
-        }
+        Buffer.setData(LimpiarBuffer.getData());
         Buffer.getGraphics().drawImage(Fondo, 1, 30, ResX, ResY, this);
         Cuete.Dibujar(Buffer);   
         this.getGraphics().drawImage(Buffer, 0, 0, this);        
@@ -67,6 +51,11 @@ public class Basic3D extends JFrame
     public static void update()
     {              
         Main.repaint();
+    }
+    
+    public void Renderer()
+    {
+        
     }
 
 }
