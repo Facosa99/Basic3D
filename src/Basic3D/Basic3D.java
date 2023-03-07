@@ -61,72 +61,12 @@ public class Basic3D extends JFrame
             e.printStackTrace();
         }
         Buffer.getGraphics().drawImage(Fondo, 1, 30, ResX, ResY, this);
-        Cuete.Dibujar(Buffer);
-        if (Escena == 1)
-        {
-            malla();
-        }        
+        Cuete.Dibujar(Buffer);   
         this.getGraphics().drawImage(Buffer, 0, 0, this);        
     } 
     public static void update()
     {              
         Main.repaint();
     }
-    
-    public void malla() {
-        int M[][]=new int[11][11];
-        double X=0, Y=0, X1=0, Y1=0, pi=3.1416, Ny=0, Nx=0;
-        int A, B;
-        for(A=0; A<=10; A++){
-            for(B=0; B<=10; B++){
-                M[A][B]=(B*20)+100;                
-            }
-        }
-        for(A=0; A<=10; A++){
-            for(B=0; B<=10; B++){
-                if(B!=0){
-                    DDA(Buffer, M[A][B]+400, M[A][A]+340, (int)Y+400, (int)X+340, Color.black);
-                    DDA(Buffer, M[B][A]+400, M[B][B]+340, (int)X+400, (int)Y+340, Color.black);
-                }
-                X=M[A][A];
-                Y=M[A][B];
-            }            
-        }
-    }
-    public void DDA(BufferedImage buffer, int x1, int y1, int x2, int y2, Color cc)
-    {
-        int dx=Math.abs(x2 - x1);
-        int dy=Math.abs(y2 - y1);
 
-        int sx=(x1<x2) ? 1 : -1;
-        int sy=(y1<y2) ? 1 : -1;
-
-        int p0=dx-dy;
-
-        while(true){
-            if ( x1 > 0 && x1 < ResX)
-            {
-                if ( y1 > 0 && y1 < ResY)
-                {
-                    buffer.setRGB(x1, y1, cc.getRGB());
-                }
-            }
-            
-            if (x1==x2 && y1==y2){
-                break;
-            }
-
-            int e2 = 2*p0;
-
-            if (e2>-dy){
-                p0 =p0-dy;
-                x1 =x1+sx;
-            }
-
-            if (e2<dx) {
-                p0 = p0+dx;
-                y1 = y1+sy;
-            }
-        }
-    }
 }

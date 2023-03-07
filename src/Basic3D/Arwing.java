@@ -94,10 +94,9 @@ public class Arwing extends Thread
         Cuete.addCara(pAIC, pAID, pAIE, Color.white); //Panel Trasero Raiz  
         Cuete.addCara(pAIA, pAIC, pAID, Color.white); //Panel Trasero Externo
                
-        Cuete.Traslacion( 0,0,0);
-        Cuete.Rotacion(0,90,90);
-        Cuete.Escalacion(5,5,5); 
-        
+        Cuete.Rotacion(90,90,0);
+        Cuete.Escalacion(3,3,3);
+        Cuete.Traslacion(500,300,500);    
     }
     public void Dibujar (BufferedImage Buffer)
     {
@@ -108,25 +107,7 @@ public class Arwing extends Thread
     {          
         do
         {
-            if ( Fase <= 115)
-            {
-                Cuete.Escalacion( 0.98,0.98,0.98);
-                Cuete.Traslacion( 0, -19, 0);
-                Cuete.Rotacion(   0,  20, 0);
-                
-            }
-            else if ( Fase == 116)
-            {
-                Basic3D.Escena = 2;
-                Cuete.Traslacion(1000, 2000, 0);
-                Cuete.Escalacion(2,2,2);
-                Cuete.Rotacion(0, 30, 0);
-                Cuete.setCentroGravedad(1000, 500, 74);
-            }
-            else
-            {
-                Cuete.Rotacion(0, 0, -1);
-            }
+            Cuete.Rotacion(1, 0, 0);
             System.out.println(Fase);
             Fase++;
             
