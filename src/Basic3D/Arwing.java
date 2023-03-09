@@ -8,14 +8,12 @@ import java.util.logging.Logger;
 public class Arwing extends Thread
 {
     static Objeto3D Cuete;
-    static int Fase = 1;
-    
+
     public void Inicializar()
     {
         Cuete = new Objeto3D();
         Cuete.setRes(1200, 700);
         Cuete.setCentroGravedad(150, 60, 25); //Eje de rotación
-        
         //--------------------------------------------------------------FUSELAJE
         int pFA[]  =   { 150,  10,   20 };   //Nariz
         int pFB[]  =   { 140,  100,  30 };   //Esquina Cabina derecha
@@ -95,30 +93,20 @@ public class Arwing extends Thread
         Cuete.addCara(pAIA, pAIC, pAID, Color.white); //Panel Trasero Externo
                
         Cuete.Rotacion(90,90,0);
-        Cuete.Escalacion(3,3,3);
+        Cuete.Escalacion(3,4,3);
         Cuete.Traslacion(500,300,500);    
     }
     public void Dibujar (BufferedImage Buffer)
     {
         Cuete.drawCuerpo(Buffer);
     }
+    public void Rotation(int X, int Y, int Z)
+    {
+        Cuete.Rotacion(X, Y, Z);
+    }
     @Override
     public void run()
     {          
-        do
-        {
-            Cuete.Rotacion(1, 0, 0);
-            System.out.println(Fase);
-            Fase++;
-            
-            
-
-            try {
-                Thread.sleep(10);
-            } catch (InterruptedException ex) {
-                Logger.getLogger(Arwing.class.getName()).log(Level.SEVERE, null, ex);
-            }            
-        }
-        while (true);
+        int A = 2+2;
     }    
 }

@@ -9,7 +9,7 @@ public class Update extends Thread
             do
             {                
                 Basic3D.update();
-                Thread.sleep(1);
+                Thread.sleep(20);
             }
         while(true);
         } catch (InterruptedException ex) {            

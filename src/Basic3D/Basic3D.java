@@ -49,7 +49,8 @@ public class Basic3D extends JFrame
         this.getGraphics().drawImage(Buffer, 0, 0, this);        
     } 
     public static void update()
-    {              
+    {
+        Cuete.Rotation(1,0,0);
         Main.repaint();
     }
     
